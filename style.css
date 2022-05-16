@@ -1,0 +1,13 @@
+.rower{
+    position: relative;
+}
+
+.positioner{
+    position: absolute;
+    left: 2px;
+    top: 0px;
+}
+.label {
+    inline-size: 300px;
+    overflow-wrap: break-word;
+}
