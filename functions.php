@@ -20,5 +20,9 @@ function pageFooter()
 {
     require("./footer.php");
 }
+function redirect($url){
+    header("Location :  $url");
+    exit;
+}
 
 

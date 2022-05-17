@@ -2,35 +2,26 @@
 
 $conn = ConnectToDataBase();
 
-  if(isset($_POST['send'])){
+  if( isset($_POST['send'])){
 
     InsertToDataBase($conn,$_POST['task']);
+redirect("http://www.google.com");
+    
 
-  }
-
-  if(isset($_POST['checked'])){
-
-    $tasks = (isset($_POST['check'])) ? $_POST['check'] : array();
-
-    if (count($tasks) > 0) { 
-
-        foreach ($tasks as $task) {  
-
-            UpdateRecord($conn,$task);
-
-        }  
-
-     } 
-
-    }
+  } 
   
-  if(isset($_POST['delete'])){
- 
-            DeleteRecord($conn,$_POST['delete']);
+  if(isset($_POST['action']) ){
+              UpdateRecord($conn,$_POST['id']);
+              redirect("./index.php");
+      }
+
+
+
+  if( isset($_POST['delete']) ){
+              DeleteRecord($conn,$_POST['id']);
+              
   }
-function func(){
-    echo "ss";
-}
+
 function ConnectToDataBase(){
 
     $servername = "localhost";
@@ -59,7 +50,8 @@ function InsertToDataBase($conn,$value){
 }
 
 function UpdateRecord($conn,$values){
-   $query = "update `list` set done='1' where id='".$values."'";
+  $done = isset($_POST['done'])?1:0;
+   $query = "update `list` set done='".$done."' where id='".$values."'";
    $result = mysqli_query($conn,$query);
    return $result;
 }
