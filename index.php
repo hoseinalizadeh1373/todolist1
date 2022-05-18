@@ -1,9 +1,22 @@
 <?php
 
-require("./functions.php");
-require("./todo_func.php");
+require("./services/loader.php");
+load_models("BaseModel");
+load_models("todolist");
 
 
+$todolist = new ToDoList;
+
+$actions = ['insert','delete','done'];
+
+if(isset($_POST['action']) and in_array($_POST['action'],$actions)){
+
+    $action = $_POST['action'];
+    
+    $todolist -> $action();
+
+    redirect('./index.php');
+}
 pageHeader("صفحه اصلی");
 
 ?>
@@ -14,7 +27,7 @@ pageHeader("صفحه اصلی");
 
             <form method="POST" id="form">
                 <div class="input-group mb-3">
-                    <button class="btn btn-outline-secondary" type="submit" id="button-addon1" name="send">اضافه کردن</button>
+                    <button class="btn btn-outline-secondary" type="submit" id="button-addon1" name="action" value='insert'>اضافه کردن</button>
                     <input type="text" class="form-control" name="task" placeholder="عنوان وظیفه / تسک" aria-label="Example text with button addon" aria-describedby="button-addon1">
                 </div>
             </form>
@@ -28,7 +41,7 @@ pageHeader("صفحه اصلی");
 
                     <?php
 
-                    $result = SelectFromDataBase($conn);
+                    $result =$todolist->SelectFromDataBase();
                     if (mysqli_num_rows($result) > 0) {
                         while ($row = mysqli_fetch_assoc($result)) {
 

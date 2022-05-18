@@ -19,7 +19,7 @@
         <button type="button" class="btn btn-secondary" id="btn_cancel" data-bs-dismiss="modal">انصراف</button>
       <form method="post"> 
       <input   type='hidden' name='id'  id="hid" />
-      <button  name='delete' value='delete' class="btn btn-primary" data-bs-target='#exampleModal' id="btn_confirm">مطمعنم !</button>
+      <button  name='action' value='delete' class="btn btn-primary" data-bs-target='#exampleModal' id="btn_confirm">مطمعنم !</button>
       </form>
       </div>
     </div>
