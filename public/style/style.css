@@ -16,8 +16,9 @@
 .sshadow-good{
     box-shadow: 0px 5px 12px 10px rgba(163, 160, 160, 0.507);
     transform: rotate3d(0, 0, 0, 0deg);
-    transition: all ease-in-out 600ms;
-    
+    transform: perspective(1500px) rotateY(15deg);
+    border-radius: 1rem;
+    transition: transform 1s ease 0s;
 }
 .sshadow-good input:focus{
     background: rgb(253, 252, 165);
@@ -26,6 +27,6 @@
     color: darkcyan;
 }
 .sshadow-good:hover{
-    transform: rotate3d(0, 1, 0.5, 360deg);
+    transform: perspective(3000px) rotateY(5deg);
 
 }
