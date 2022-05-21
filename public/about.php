@@ -1,11 +1,13 @@
 <?php
 
-require("./functions.php");
-pageHeader("درباره ما");
+require("../loader.php");
+
+load_models("BaseModel");
+load_models("User");
+
+layout::pageHeader("درباره ما");
 
 echo "درباره ما ...";
 echo "<br>";
 
-sayHello("علی");
-
-pageFooter();
+layout::pageFooter();

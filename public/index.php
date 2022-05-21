@@ -18,7 +18,7 @@ if(isset($_POST['action']) and in_array($_POST['action'],$actions)){
     redirect('./index.php');
 }
 
-pageHeader("صفحه اصلی");
+layout::pageHeader("صفحه اصلی");
 
 ?>
 
@@ -84,4 +84,4 @@ pageHeader("صفحه اصلی");
 
 
 
-pageFooter();
+layout::pageFooter();
