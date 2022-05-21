@@ -36,7 +36,10 @@ layout::pageHeader("ورود کاربران");
         <label for="username" class="form-label text-warning">رمز عبور</label>
         <input type="password" name="password" class="form-control w-100" placeholder="password" />
 
-        <button class="mt-2 btn btn-primary w-12">تایید</button>
+        <div class="col text-center">
+        <button class="mt-3 btn btn-warning w-50 align-self-center">تایید</button>
+        </div>
+       
     </form>
 
     

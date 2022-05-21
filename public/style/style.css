@@ -15,5 +15,17 @@
 
 .sshadow-good{
     box-shadow: 0px 5px 12px 10px rgba(163, 160, 160, 0.507);
+    transform: rotate3d(0, 0, 0, 0deg);
+    transition: all ease-in-out 600ms;
     
+}
+.sshadow-good input:focus{
+    background: rgb(253, 252, 165);
+}
+.sshadow-good input:focus::placeholder{
+    color: darkcyan;
+}
+.sshadow-good:hover{
+    transform: rotate3d(0, 1, 0.5, 360deg);
+
 }
