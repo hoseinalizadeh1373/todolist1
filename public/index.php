@@ -1,6 +1,6 @@
 <?php
 
-require("./services/loader.php");
+require("../loader.php");
 load_models("BaseModel");
 load_models("todolist");
 
@@ -17,6 +17,7 @@ if(isset($_POST['action']) and in_array($_POST['action'],$actions)){
 
     redirect('./index.php');
 }
+
 pageHeader("صفحه اصلی");
 
 ?>
@@ -52,7 +53,7 @@ pageHeader("صفحه اصلی");
 
                                 "<input type='hidden' name='action' value='done' />" .
 
-                                "<input type='hidden' name='id' class='hid1' value=". $row['id']. "/>" .
+                                "<input type='hidden' name='id' class='hid1' value=". $row['id']. "  />" .
 
                                 "<label class='form-check-label label' for='flexSwitchCheckChecked'>" . $row['title'] . "</label>" .
 
