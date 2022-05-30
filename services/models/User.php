@@ -20,7 +20,7 @@ class User extends BaseModel{
     public function checkifExists ($username){
         $sql = "select * from users where username='".$username."'";
         $result =mysqli_query($this ->dbcon,$sql);
-        return $result;
+        return mysqli_num_rows($result);
     }
     public function login($username,$password){
         $sql = "select * from users where username='".$username."' and password ='".$password."' limit 0,1";

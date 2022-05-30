@@ -73,11 +73,6 @@ let a =0;
         });
     }
 
-//     myModal.addEventListener('shown.bs.modal', function () {
-
-//     myInput.focus();
-// });
-
 
     </script>
 </body>
