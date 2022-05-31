@@ -1,9 +1,9 @@
 <?php
 
 require("../loader.php");
-load_models("BaseModel");
-load_models("todolist");
 
+use Services\Models\ToDoList;
+use Services\Layout\Layout;
 
 $todolist = new ToDoList;
 
@@ -22,7 +22,7 @@ layout::pageHeader("صفحه اصلی");
 
 ?>
 
-<div class="container mt-1 border rounded bg-dark text-info  d-flex flex-column  pt-2">
+<div class="container mt-1 border rounded bg-dark text-info  d-flex flex-column  pt-2 cont">
     <div class="row  d-flex flex-column jusitify-content-center align-items-center m-2">
         <div class="col-md-6">
 

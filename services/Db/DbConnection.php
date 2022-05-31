@@ -1,5 +1,7 @@
 <?php
 
+namespace Services\Db;
+
 class DbConnection{
 
     public function connect(){

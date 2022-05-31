@@ -1,6 +1,7 @@
-
 <?php
-class layout {
+namespace Services\Layout;
+
+class Layout {
    public static function pageHeader($pageTitle)
     {
         require(__DIR__."/header.php");

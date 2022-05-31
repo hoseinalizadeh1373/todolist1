@@ -1,7 +1,16 @@
 <?php
-require(__DIR__ . "/services/functions/functions.php");
-require(__DIR__ . "/services/layout/layout.php");
-require(__DIR__ . "/services/models/models.php");
-require(__DIR__ . "/services/db/db.php");
-require(__DIR__ . "/services/Auth/Auth.php");
-require(__DIR__ . "/services/Valid/validation.php");
+require(__DIR__."/functions.php");
+
+
+spl_autoload_register(function($ClassName){
+
+    $FileName = __DIR__ . DIRECTORY_SEPARATOR .$ClassName .".php";
+    $FileName = str_replace("\\",DIRECTORY_SEPARATOR,$FileName);
+
+    if(file_exists($FileName)){
+        require($FileName);
+    }
+    else{
+        die($FileName."یافت نشد");
+    }
+});

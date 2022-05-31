@@ -1,4 +1,7 @@
 <?php
+namespace Services\Models;
+
+use Services\Models\BaseModel;
 
 
 class ToDoList extends BaseModel

@@ -1,9 +1,10 @@
 <?php 
+namespace Services\Models;
+use Services\Db\DbConnection;
 
 class BaseModel {
 
     protected $dbcon;
-
 
     public function __construct()
     {

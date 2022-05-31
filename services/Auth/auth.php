@@ -1,5 +1,10 @@
 <?php
+namespace Services\Auth;
+
+use Services\Models\User;
+
 class Auth {
+
     public static function login($id)
     {
         $token = random_int(1000000,9000000);
@@ -9,7 +14,6 @@ class Auth {
     }
     public static function user()
     {
-        load_models("User");
         if(!isset($_COOKIE['login_user'])){
             return null;
         }

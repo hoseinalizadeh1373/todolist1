@@ -1,9 +1,7 @@
 <?php
 
 require("../loader.php");
-
-load_models("BaseModel");
-load_models("User");
+use Services\Layout\Layout;
 
 layout::pageHeader("تماس با ما");
 
