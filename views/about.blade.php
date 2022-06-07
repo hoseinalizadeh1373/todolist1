@@ -1,9 +1,7 @@
 @extends("layout.app")
 @section("about")
 
-
 <div class="bg-info about">
-
 </div>
 <div class=" d-flex justify-content-center align-items-center bg-transparent">
 <img src=" img/pic1.png" class="w-25 p-5">
@@ -17,5 +15,5 @@
 
 
 @endsection
-@unless("content")
-@endunless
+
+

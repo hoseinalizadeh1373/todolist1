@@ -1,9 +1,7 @@
 
 <?php $__env->startSection("about"); ?>
 
-
 <div class="bg-info about">
-
 </div>
 <div class=" d-flex justify-content-center align-items-center bg-transparent">
 <img src=" img/pic1.png" class="w-25 p-5">
@@ -17,7 +15,7 @@
 
 
 <?php $__env->stopSection(); ?>
-<?php if (! ("content")): ?>
-<?php endif; ?>
+
+
 
 <?php echo $__env->make("layout.app", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\wamp64\www\todolist1\views/about.blade.php ENDPATH**/ ?>

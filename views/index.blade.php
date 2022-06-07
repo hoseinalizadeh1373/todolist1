@@ -21,7 +21,7 @@
                     $secondary = $row['done'] ? "'flexSwitchCheckChecked'  checked " : "flexSwitchCheckDefault";
                     @endphp
                     <div class='form-check form-switch  rounded  border-bottom border-warning pt-1 pb-1 mb-1 rower'>
-                        <form method='post' >
+                        <form method='post' action="/storeNewItem">
                             <input type='hidden' name='action' value='done' />
                             <input type='hidden' name='id' class='hid1' value="{{ $row['id'] }}"  />
                             <label class='form-check-label label' for='flexSwitchCheckChecked'>{{ $row['title'] }} </label>

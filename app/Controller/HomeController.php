@@ -4,18 +4,18 @@ namespace Services\Controller;
 
 use Services\Models\ToDoList;
 use Services\Layout\Layout;
+use Services\Auth\Auth;
 
 class HomeController
 {
     public function index()
     {
         $todolist = new ToDoList;
-
-       
         $result = $todolist->SelectFromDataBase();
-        Layout::render('index', ["result" => $result]);
+        Layout::render('index', ["result" => $result,"title"=>"صفحه اصلی"]);
     }
-    public function store(){
+    public function store()
+    {
 
         $todolist = new ToDoList;
         $actions = ['insert', 'delete', 'done'];
@@ -29,8 +29,10 @@ class HomeController
             redirect('/');
         }
     }
-    public function about(){
-        Layout::render('about',[]);
-    }
 
+    public function logout()
+    {
+        Auth::logout();
+        redirect("/");
+    }
 }

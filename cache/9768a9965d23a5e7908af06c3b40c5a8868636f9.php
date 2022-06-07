@@ -24,9 +24,9 @@
         <div class="col text-center">
             <button class="mt-3 btn btn-warning w-50 align-self-center">تایید</button>
         </div>
-        <div class="alert alert-danger m-1 p-3 <?php echo e($error_log!= "" ?  "d-block" :  "d-none"); ?> " role="alert"><?php if(isset ($error_log))echo $error_log; ?></div>
+        <div class="alert alert-danger m-1 p-3 <?php echo e($error_log!= "" ?  "d-block" :  "d-none"); ?> " role="alert"><?php echo e($error_log); ?> </div>
         <div class="col text-center ">
-            <a href="./signup.php" class="align-self-center mt-5 py-2">هنوز عضو نشدم !</a>
+            <a href="/signup" class="align-self-center mt-5 py-2">هنوز عضو نشدم !</a>
         </div>
 
 

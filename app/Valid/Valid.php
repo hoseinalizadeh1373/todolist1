@@ -29,7 +29,7 @@ class Valid {
         $user_in_use = new User();
         $res = $user_in_use->checkifExists($this->username);
         if($res>0){
-            $this->error .= "<br>"."نام کاربری از قبل موجود است.";
+            $this->error .= "<br>"." نام کاربری از قبل موجود است.";
         }
      }
      
